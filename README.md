@@ -155,6 +155,7 @@ def aplicaFiltro():
 ```
 Depois, é feita a troca de quadrantes novamente e aplicada a transformada inversa. É retornada a magnitude dessa matriz, aplicada uma exponencial e normalizada para poder imprimir a imagem.
 
+
 Imagem filtrada:
 ![filtrada](https://github.com/alisson002/alisson002.github.io/blob/main/dftfiltrada.jpeg?raw=true)
 
