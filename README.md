@@ -162,7 +162,7 @@ Depois, é feita a troca de quadrantes novamente e aplicada a transformada inver
 
 
 Imagem filtrada:
-![imagem filtrada](https://github.com/alisson002/alisson002.github.io/blob/main/dftfiltrada.jpg?raw=true?style=centerme)
+![imagem filtrada](https://github.com/alisson002/alisson002.github.io/blob/main/dftfiltrada.jpeg?raw=true?style=centerme)
 
 ## Exercicio 8.3 - cannypoints
 O programa abaixo faz o pontilhismo em uma imagem RGB:
@@ -254,10 +254,8 @@ for i in vector:
 ```
 
 Imagem original:
-
 ![floresOriginal](https://github.com/alisson002/alisson002.github.io/blob/main/cannypoints.jpg?raw=true?style=centerme)
 
 Imagem pontilhada:
-
 ![floresPontilhada](https://github.com/alisson002/alisson002.github.io/blob/main/cannypointspontilhada.jpg?raw=true?style=centerme)
 
