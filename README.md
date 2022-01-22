@@ -1,6 +1,11 @@
 # Lista de programação da dsiciplina Processamento Digital de Imagens (DCA0445)
 Alisson Sousa Moreira - 20200149004 - alisson-mu@hotmail.com
 
+img[src$="centerme"] {
+  display:block;
+  margin: 0 auto;
+}
+
 ## Exercicio 7.2 - homomórfico
 
 O processo de filtragem homomórfica é baseado nos princípios de iluminância e refletância. A iluminância representa variações espaciais lentas (frequências baixas), a refletância representa variações espaciais rápidas (frequências altas). Tomamos a transformada de Fourier da imagem e aplicamos um filtro sequencial (versão modificada do filtro gaussiano) que atenua as frequências baixas e mantém as frequências altas (filtro passa-altas) e fazemos a transformada de Fourier inversa, desta forma, melhorando a iluminância da imagem.
@@ -157,10 +162,7 @@ Depois, é feita a troca de quadrantes novamente e aplicada a transformada inver
 
 
 Imagem filtrada:
-<p align="top">
-  <img src="https://github.com/alisson002/alisson002.github.io/blob/main/dftfiltrada.jpeg?raw=true" />
-</p>
-
+![imagem filtrada](https://github.com/alisson002/alisson002.github.io/blob/main/dftfiltrada.jpg?raw=true?style=centerme)
 
 ## Exercicio 8.3 - cannypoints
 O programa abaixo faz o pontilhismo em uma imagem RGB:
@@ -252,7 +254,10 @@ for i in vector:
 ```
 
 Imagem original:
-![floresOriginal](https://github.com/alisson002/alisson002.github.io/blob/main/cannypoints.jpg?raw=true)
+
+![floresOriginal](https://github.com/alisson002/alisson002.github.io/blob/main/cannypoints.jpg?raw=true?style=centerme)
 
 Imagem pontilhada:
-![floresPontilhada](https://github.com/alisson002/alisson002.github.io/blob/main/cannypointspontilhada.jpg?raw=true)
+
+![floresPontilhada](https://github.com/alisson002/alisson002.github.io/blob/main/cannypointspontilhada.jpg?raw=true?style=centerme)
+
