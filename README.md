@@ -250,7 +250,6 @@ for i in vector:
 ```
 
 Imagem original:
-
 ![floresOriginal](https://github.com/alisson002/alisson002.github.io/blob/main/cannypoints.jpg?raw=true)
 
 Imagem pontilhada:
@@ -323,6 +322,7 @@ for i in range(1, 11):
 ![wargraymonOriginal](https://github.com/alisson002/alisson002.github.io/blob/main/kmeans.jpg?raw=true)
 
 Gif das imagens geradas:
+
 ![wargraymonGif](https://github.com/alisson002/alisson002.github.io/blob/main/kmeansGif/kmeans.gif?raw=true)
 
 
