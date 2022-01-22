@@ -159,6 +159,10 @@ Depois, é feita a troca de quadrantes novamente e aplicada a transformada inver
 Imagem filtrada:
 ![filtrada](https://github.com/alisson002/alisson002.github.io/blob/main/dftfiltrada.jpeg?raw=true)
 
+<p align="left">
+  <img src="https://github.com/alisson002/alisson002.github.io/blob/main/dftfiltrada.jpeg?raw=true" />
+</p>
+
 
 ## Exercicio 8.3 - cannypoints
 O programa abaixo faz o pontilhismo em uma imagem RGB:
