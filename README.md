@@ -157,7 +157,7 @@ Depois, é feita a troca de quadrantes novamente e aplicada a transformada inver
 
 
 Imagem filtrada:
-<p>
+<p text = "Imagem filtrada:">
   <img src="https://github.com/alisson002/alisson002.github.io/blob/main/dftfiltrada.jpeg?raw=true" />
 </p>
 
