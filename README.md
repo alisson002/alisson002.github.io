@@ -214,7 +214,7 @@ cv2.imwrite("C:/Users/Alisson Moreira/Desktop/alisson002.github.io/cannypointspo
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-O programa acima percorre cada pixel da imagem e desenha um círculo de raio 2 com a mesma cor e na posição correspondente, usando um passo de 5 (escolhe um pixel para cada 5, nos eixos x e y).
+Ele percorre cada pixel da imagem e desenha um círculo de raio 2 com a mesma cor e na posição correspondente, usando um passo de 5 (escolhe um pixel para cada 5, nos eixos x e y).
 
 Neste trecho do código é criada uma copia da imagem original que é borrada, para ser usada como fundo da imagem de pontilhismo:
 ```python
