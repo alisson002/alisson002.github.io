@@ -43,7 +43,8 @@ for i in vector:
                 bola = int(raio + (i)/190*randrange(2,5))
                 cv2.circle(points, (y, x), bola, pixel, -1, cv2.LINE_AA)
 
-cv2.imshow("pontilhado", np.hstack((img,points)))
-cv2.imwrite("cannypoints2.jpg", points)
+cv2.imshow("original", img)
+cv2.imshow("pontilhada", points)
+cv2.imwrite("C:/Users/Alisson Moreira/Desktop/alisson002.github.io/cannypointspontilhada.jpg", points)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
