@@ -157,8 +157,6 @@ Depois, é feita a troca de quadrantes novamente e aplicada a transformada inver
 
 
 Imagem filtrada:
-![filtrada](https://github.com/alisson002/alisson002.github.io/blob/main/dftfiltrada.jpeg?raw=true)
-
 <p align="left">
   <img src="https://github.com/alisson002/alisson002.github.io/blob/main/dftfiltrada.jpeg?raw=true" />
 </p>
@@ -255,9 +253,11 @@ for i in vector:
 
 
 Imagem original:
+
 ![floresOriginal](https://github.com/alisson002/alisson002.github.io/blob/main/cannypoints.jpg?raw=true)
 
 
 
 Imagem pontilhada:
+
 ![floresPontilhada](https://github.com/alisson002/alisson002.github.io/blob/main/cannypointspontilhada.jpg?raw=true)
