@@ -118,10 +118,10 @@ complex = cv2.dft(padded,flags=cv2.DFT_COMPLEX_OUTPUT)
 complex = np.fft.fftshift(complex)
 ```
 Imagen original em tons de cinza:
-![](https://github.com/alisson002/alisson002.github.io/blob/main/dftcinza.jpg)
+![tons de cinza](https://github.com/alisson002/alisson002.github.io/blob/main/dftcinza.jpg?raw=true)
 
 Imagem do espectro de frequência:
-![](https://github.com/alisson002/alisson002.github.io/blob/main/dftfft.jpg)
+![fft](https://github.com/alisson002/alisson002.github.io/blob/main/dftfft.jpg?raw=true)
 
 Aqui é utilizada uma mascara como filtro do espectro frenquêncial: 
 
@@ -154,5 +154,5 @@ def aplicaFiltro():
 Depois, é feita a troca de quadrantes novamente e aplicada a transformada inversa. É retornada a magnitude dessa matriz, aplicada uma exponencial, e normalizada para poder imprimir a imagem.
 
 Imagem filtrada:
-![](https://github.com/alisson002/alisson002.github.io/blob/main/dftfiltrada.jpeg)
+![filtrada](https://github.com/alisson002/alisson002.github.io/blob/main/dftfiltrada.jpeg?raw=true)
 
