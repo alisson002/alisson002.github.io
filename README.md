@@ -250,6 +250,7 @@ for i in vector:
 ```
 
 Imagem original:
+
 ![floresOriginal](https://github.com/alisson002/alisson002.github.io/blob/main/cannypoints.jpg?raw=true)
 
 Imagem pontilhada:
