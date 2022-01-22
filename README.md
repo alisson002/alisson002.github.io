@@ -4,7 +4,7 @@ Alisson Sousa Moreira - 20200149004 - alisson-mu@hotmail.com
 ## Exercicio 7.2 - homomórfico
 
 
-'''python
+```python
 import cv2
 import numpy as np
 from math import exp, sqrt
@@ -99,6 +99,6 @@ cv2.createTrackbar(trackbarName,"homomorfico",dv,dft_M,setd0)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-'''
+```
 
 
