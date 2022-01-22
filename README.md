@@ -258,7 +258,7 @@ Imagem pontilhada:
 ![floresPontilhada](https://github.com/alisson002/alisson002.github.io/blob/main/cannypointspontilhada.jpg?raw=true)
 
 
-## Exercicio 8.3 -  kmeans
+## Exercicio 9.2 -  kmeans
 K-means é um processo de quantização que visa classificar N observações em K clusters.
 
 No processamento digital de imagens, cada observação corresponde a um pixel, e os clusters são a quantidade de cores que queremos. Podemos ordenar cada pixel a partir da aproximação com cada centróide (um centróide por cluster), então, pegamos a distância média das amostras em cada cluster, criando novas posições de centróides. É um processo iterativo, esse processo acontece até não termos mudanças mais significativas nas posições dos centróides, enfim, podemos atribuir uma cor para cada cluster.
