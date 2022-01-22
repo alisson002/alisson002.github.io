@@ -3,9 +3,7 @@ Alisson Sousa Moreira - 20200149004 - alisson-mu@hotmail.com
 
 ## Exercicio 7.2 - homomórfico
 
-K-means é um processo de quantização que visa classificar N observações em K clusters.
-
-No processamento digital de imagens, cada observação corresponde a um pixel, e os clusters são a quantidade de cores que queremos. Podemos ordenar cada pixel a partir da aproximação com cada centróide (um centróide por cluster), então, pegamos a distância média das amostras em cada cluster, criando novas posições de centróides. É um processo iterativo, esse processo acontece até não termos mudanças mais significativas nas posições dos centróides, enfim, podemos atribuir uma cor para cada cluster.
+O processo de filtragem homomórfica é baseado nos princípios de iluminância e refletância. A iluminância representa variações espaciais lentas (frequências baixas), a refletância representa variações espaciais rápidas (frequências altas). Tomamos a transformada de Fourier da imagem e aplicamos um filtro sequencial (versão modificada do filtro gaussiano) que atenua as frequências baixas e mantém as frequências altas (filtro passa-altas) e fazemos a transformada de Fourier inversa, desta forma, melhorando a iluminância da imagem.
 
 ```python
 import cv2
