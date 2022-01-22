@@ -249,8 +249,11 @@ for i in vector:
                 cv2.circle(points, (y, x), bola, pixel, -1, cv2.LINE_AA)
 ```
 
+
 Imagem original:
 ![floresOriginal](https://github.com/alisson002/alisson002.github.io/blob/main/cannypoints.jpg?raw=true)
+
+
 
 Imagem pontilhada:
 ![floresPontilhada](https://github.com/alisson002/alisson002.github.io/blob/main/cannypointspontilhada.jpg?raw=true)
