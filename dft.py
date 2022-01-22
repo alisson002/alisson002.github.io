@@ -64,8 +64,9 @@ def setd0(dv):
     aplicaFiltro()
 
 
-image = cv2.imread("C:/Users/Alisson Moreira/Desktop/PDI---Unidade1/dft.jpg", 0)
+image = cv2.imread("C:/Users/Alisson Moreira/Desktop/alisson002.github.io/dft.jpg", 0)
 cv2.imshow("original", image)
+cv2.imwrite("C:/Users/Alisson Moreira/Desktop/alisson002.github.io/dftcinza.jpg", image)
 image = np.float32(image)
 height, width = image.shape
 
@@ -77,6 +78,7 @@ complex = cv2.dft(padded,flags=cv2.DFT_COMPLEX_OUTPUT)
 complex = np.fft.fftshift(complex)
 img_back = 20*np.log(cv2.magnitude(complex[:,:,0],complex[:,:,1]))
 cv2.imshow("fft", np.uint8(img_back))
+cv2.imwrite("C:/Users/Alisson Moreira/Desktop/alisson002.github.io/dftfft.jpg", np.uint8(img_back))
 cv2.imshow("homomorfico", image)
 
 

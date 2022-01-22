@@ -6,7 +6,7 @@ import cv2
 nclusters = 8
 attempts = 1
 
-img = cv2.imread("C:/Users/Alisson Moreira/Desktop/PDI---Unidade1/kmeans.jpg")
+img = cv2.imread("C:/Users/Alisson Moreira/Desktop/alisson002.github.io/kmeans.jpg")
 image = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 #img = cv2.resize(img, (0,0), fx=0.5, fy=0.5) 
 samples = img.reshape((-1,3))
@@ -31,7 +31,7 @@ for i in range(1, 11):
     newimg = vals.reshape((img.shape))
 
     cv2.imshow('New Image', newimg)
-    cv2.imwrite("C:/Users/Alisson Moreira/Desktop/PDI---Unidade1/kmeansGif/kmeans.png", newimg)
+    cv2.imwrite("C:/Users/Alisson Moreira/Desktop/alisson002.github.io/kmeansGif/kmeans.png", newimg)
     cv2.waitKey(0) 
      
 

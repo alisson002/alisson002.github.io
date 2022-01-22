@@ -3,6 +3,9 @@ Alisson Sousa Moreira - 20200149004 - alisson-mu@hotmail.com
 
 ## Exercicio 7.2 - homomórfico
 
+K-means é um processo de quantização que visa classificar N observações em K clusters.
+
+No processamento digital de imagens, cada observação corresponde a um pixel, e os clusters são a quantidade de cores que queremos. Podemos ordenar cada pixel a partir da aproximação com cada centróide (um centróide por cluster), então, pegamos a distância média das amostras em cada cluster, criando novas posições de centróides. É um processo iterativo, esse processo acontece até não termos mudanças mais significativas nas posições dos centróides, enfim, podemos atribuir uma cor para cada cluster.
 
 ```python
 import cv2
@@ -71,7 +74,7 @@ def setd0(dv):
     aplicaFiltro()
 
 
-image = cv2.imread("C:/Users/Alisson Moreira/Desktop/PDI---Unidade1/dft.jpg", 0)
+image = cv2.imread("C:/Users/Alisson Moreira/Desktop/alisson002.github.io/dft.jpg", 0)
 cv2.imshow("original", image)
 image = np.float32(image)
 height, width = image.shape
@@ -101,4 +104,57 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 
+Neste trecho do código a imagem é carregada em tons de cinza e coloca um padding para chegar no tamanho otimo para a FFT. Soma 1 em toda a imagem para não ter log(0), e depois é aplicado logaritmo neperiano em toda a imagem.
+```python
+image = cv2.imread("C:/Users/Alisson Moreira/Desktop/alisson002.github.io/dft.jpg", 0)
+cv2.imshow("original", image)
+cv2.imwrite("C:/Users/Alisson Moreira/Desktop/alisson002.github.io/dftcinza.png", image)
+image = np.float32(image)
+height, width = image.shape
+
+dft_M = cv2.getOptimalDFTSize(height)
+dft_N = cv2.getOptimalDFTSize(width)
+padded = cv2.copyMakeBorder(image, 0, dft_M-height,0,dft_N-width, cv2.BORDER_CONSTANT, 0) + 1
+padded = np.log(padded)
+complex = cv2.dft(padded,flags=cv2.DFT_COMPLEX_OUTPUT)
+complex = np.fft.fftshift(complex)
+```
+Imagen original em tons de cinza:
+![](C:/Users/Alisson Moreira/Desktop/alisson002.github.io/dftcinza.jpg)
+
+Imagem do espectro de frequência:
+![](C:/Users/Alisson Moreira/Desktop/alisson002.github.io/dftfft.jpg)
+
+Aqui é utilizada uma mascara como filtro do espectro frenquêncial: 
+
+```python
+def aplicaFiltro():
+    global gh, gl, c, d0, complex
+    du = np.zeros(complex.shape, dtype=np.float32)
+    for u in range(dft_M):
+        for v in range(dft_N):
+            du[u,v] = sqrt((u-dft_M/2.0)*(u-dft_M/2.0)+(v-dft_N/2.0)*(v-dft_N/2.0))
+
+    du2 = cv2.multiply(du,du) / (d0*d0)
+    re = np.exp(- c * du2)
+    H = (gh - gl) * (1 - re) + gl
+   
+
+    filtered = cv2.mulSpectrums(complex,H,0)
+    
+
+    filtered = np.fft.ifftshift(filtered)
+    filtered = cv2.idft(filtered)
+    filtered = cv2.magnitude(filtered[:,:,0], filtered[:,:,1])
+
+    cv2.normalize(filtered,filtered,0, 1, cv2.NORM_MINMAX)
+    filtered = np.exp(filtered)
+    cv2.normalize(filtered, filtered,0, 1, cv2.NORM_MINMAX)
+
+    cv2.imshow("homomorfico", filtered)
+```
+Depois, é feita a troca de quadrantes novamente e aplicada a transformada inversa. É retornada a magnitude dessa matriz, aplicada uma exponencial, e normalizada para poder imprimir a imagem.
+
+Imagem filtrada:
+![](C:/Users/Alisson Moreira/Desktop/alisson002.github.io/dftfiltrada.png)
 

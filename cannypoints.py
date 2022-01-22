@@ -8,7 +8,7 @@ jitter = 3
 raio = 2
 kernel = np.ones([3,3],dtype=np.uint8)
 
-img = cv2.imread("C:/Users/Alisson Moreira/Desktop/PDI---Unidade1/cannypoints.jpg")
+img = cv2.imread("C:/Users/Alisson Moreira/Desktop/alisson002.github.io/cannypoints.jpg")
 image = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 
 height, width, depth = img.shape
