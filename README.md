@@ -155,10 +155,10 @@ def aplicaFiltro():
 ```
 Depois, é feita a troca de quadrantes novamente e aplicada a transformada inversa. É retornada a magnitude dessa matriz, aplicada uma exponencial e normalizada para poder imprimir a imagem.
 
-<div align="left">
-<p>Imagem filtrada:</p>
-<img src="https://github.com/alisson002/alisson002.github.io/blob/main/dftfiltrada.jpeg?raw=true" >
-</div>
+Imagem filtrada:
+
+![imagem filtrada](https://github.com/alisson002/alisson002.github.io/blob/main/dftfiltrada.jpeg?raw=true)
+
 
 ## Exercicio 8.3 - cannypoints
 O programa abaixo faz o pontilhismo em uma imagem RGB:
@@ -250,8 +250,79 @@ for i in vector:
 ```
 
 Imagem original:
-![floresOriginal](https://github.com/alisson002/alisson002.github.io/blob/main/cannypoints.jpg?raw=true?style=centerme)
+
+![floresOriginal](https://github.com/alisson002/alisson002.github.io/blob/main/cannypoints.jpg?raw=true)
 
 Imagem pontilhada:
-![floresPontilhada](https://github.com/alisson002/alisson002.github.io/blob/main/cannypointspontilhada.jpg?raw=true?style=centerme)
+
+![floresPontilhada](https://github.com/alisson002/alisson002.github.io/blob/main/cannypointspontilhada.jpg?raw=true)
+
+
+## Exercicio 8.3 -  kmeans
+K-means é um processo de quantização que visa classificar N observações em K clusters.
+
+No processamento digital de imagens, cada observação corresponde a um pixel, e os clusters são a quantidade de cores que queremos. Podemos ordenar cada pixel a partir da aproximação com cada centróide (um centróide por cluster), então, pegamos a distância média das amostras em cada cluster, criando novas posições de centróides. É um processo iterativo, esse processo acontece até não termos mudanças mais significativas nas posições dos centróides, enfim, podemos atribuir uma cor para cada cluster.
+
+```python
+import random 
+import numpy as np
+import cv2
+
+nclusters = 8
+attempts = 1
+
+img = cv2.imread("C:/Users/Alisson Moreira/Desktop/alisson002.github.io/kmeans.jpg")
+image = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+samples = img.reshape((-1,3))
+
+samples = np.float32(samples)
+
+for i in range(1, 11):
+    criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 10000, 0.1*random.randint(1,100))
+    x, labels, centers = cv2.kmeans(samples, nclusters, None, criteria, attempts, cv2.KMEANS_RANDOM_CENTERS)
+
+    centers = np.uint8(centers)
+    vals = centers[labels.flatten()]
+    newimg = vals.reshape((img.shape))
+
+    cv2.imshow('New Image', newimg)
+    cv2.imwrite("C:/Users/Alisson Moreira/Desktop/alisson002.github.io/kmeansGif/kmeans.png", newimg)
+    cv2.waitKey(0) 
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+O programa acima gera uma saida diferente para cada uma das iterações, sendo 10 no total.
+
+No trecho abaixo é feita a leitura e conversão da imagem original:
+```python
+img = cv2.imread("C:/Users/Alisson Moreira/Desktop/alisson002.github.io/kmeans.jpg")
+image = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+samples = img.reshape((-1,3))
+
+samples = np.float32(samples)
+```
+
+Aqui é onde as imagens são geradas:
+```python
+for i in range(1, 11):
+    criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 10000, 0.1*random.randint(1,100))
+    x, labels, centers = cv2.kmeans(samples, nclusters, None, criteria, attempts, cv2.KMEANS_RANDOM_CENTERS)
+
+    centers = np.uint8(centers)
+    vals = centers[labels.flatten()]
+    newimg = vals.reshape((img.shape))
+
+    cv2.imshow('New Image', newimg)
+    cv2.imwrite("C:/Users/Alisson Moreira/Desktop/alisson002.github.io/kmeansGif/kmeans.png", newimg)
+    cv2.waitKey(0)  
+```
+ Usando KMEANS_RANDOM_CENTERS ao inves de KMEANS_PP_CENTERS cada posição inicial do Cluster é randomizada, gerando saídas diferentes a cada vez, para 10 rodadas, temos 10 saídas diferentes, conforme mostrado abaixo.
+
+ Imagem original:
+![wargraymonOriginal](https://github.com/alisson002/alisson002.github.io/blob/main/kmeans.jpg?raw=true)
+
+Gif das imagens geradas:
+![wargraymonGif](https://github.com/alisson002/alisson002.github.io/blob/main/kmeansGif/kmeans.gif?raw=true)
+
 
