@@ -1,6 +1,10 @@
 # Lista de programação da dsiciplina Processamento Digital de Imagens (DCA0445)
 Alisson Sousa Moreira - 20200149004 - alisson-mu@hotmail.com
 
+[Exercicio 7.2 - homomórfico](https://alisson002.github.io/#exercicio-72---homom%C3%B3rfico)
+[Exercicio 8.3 - cannypoints](https://alisson002.github.io/#exercicio-83---cannypoints)
+[Exercicio 9.2 - kmeans](https://alisson002.github.io/#exercicio-92----kmeans)
+
 ## Exercicio 7.2 - homomórfico
 
 O processo de filtragem homomórfica é baseado nos princípios de iluminância e refletância. A iluminância representa variações espaciais lentas (frequências baixas), a refletância representa variações espaciais rápidas (frequências altas). Tomamos a transformada de Fourier da imagem e aplicamos um filtro sequencial (versão modificada do filtro gaussiano) que atenua as frequências baixas e mantém as frequências altas (filtro passa-altas) e fazemos a transformada de Fourier inversa, desta forma, melhorando a iluminância da imagem.
@@ -160,7 +164,7 @@ Imagem filtrada:
 ![imagem filtrada](https://github.com/alisson002/alisson002.github.io/blob/main/dftfiltrada.jpeg?raw=true)
 
 
-## Exercicio 8.3 - cannypoints
+## Exercicio 8.3 - cannypoints [topo](https://alisson002.github.io/)
 O programa abaixo faz o pontilhismo em uma imagem RGB:
 ```python
 import cv2
