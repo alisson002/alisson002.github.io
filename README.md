@@ -2,7 +2,9 @@
 Alisson Sousa Moreira - 20200149004 - alisson-mu@hotmail.com
 
 [Exercicio 7.2 - homomórfico](https://alisson002.github.io/#exercicio-72---homom%C3%B3rfico)
+
 [Exercicio 8.3 - cannypoints](https://alisson002.github.io/#exercicio-83---cannypoints)
+
 [Exercicio 9.2 - kmeans](https://alisson002.github.io/#exercicio-92----kmeans)
 
 ## Exercicio 7.2 - homomórfico
@@ -164,7 +166,7 @@ Imagem filtrada:
 ![imagem filtrada](https://github.com/alisson002/alisson002.github.io/blob/main/dftfiltrada.jpeg?raw=true)
 
 
-## Exercicio 8.3 - cannypoints [topo](https://alisson002.github.io/)
+## Exercicio 8.3 - cannypoints
 O programa abaixo faz o pontilhismo em uma imagem RGB:
 ```python
 import cv2
