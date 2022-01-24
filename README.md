@@ -1,13 +1,13 @@
 # Lista de programação da dsiciplina Processamento Digital de Imagens (DCA0445)
 Alisson Sousa Moreira - 20200149004 - alisson-mu@hotmail.com
 
-[Exercicio 7.2 - homomórfico](https://alisson002.github.io/#exercicio-72---homom%C3%B3rfico)
+[Exercício 7.2 - homomórfico](https://alisson002.github.io/#Exercício-72---homom%C3%B3rfico)
 
-[Exercicio 8.3 - cannypoints](https://alisson002.github.io/#exercicio-83---cannypoints)
+[Exercício 8.3 - cannypoints](https://alisson002.github.io/#Exercício-83---cannypoints)
 
-[Exercicio 9.2 - kmeans](https://alisson002.github.io/#exercicio-92----kmeans)
+[Exercício 9.2 - kmeans](https://alisson002.github.io/#Exercício-92----kmeans)
 
-## Exercicio 7.2 - homomórfico
+## Exercício 7.2 - homomórfico
 
 O processo de filtragem homomórfica é baseado nos princípios de iluminância e refletância. A iluminância representa variações espaciais lentas (frequências baixas), a refletância representa variações espaciais rápidas (frequências altas). Tomamos a transformada de Fourier da imagem e aplicamos um filtro sequencial (versão modificada do filtro gaussiano) que atenua as frequências baixas e mantém as frequências altas (filtro passa-altas) e fazemos a transformada de Fourier inversa, desta forma, melhorando a iluminância da imagem.
 
@@ -166,7 +166,7 @@ Imagem filtrada:
 ![imagem filtrada](https://github.com/alisson002/alisson002.github.io/blob/main/dftfiltrada.jpeg?raw=true)
 
 
-## Exercicio 8.3 - cannypoints
+## Exercício 8.3 - cannypoints
 O programa abaixo faz o pontilhismo em uma imagem RGB:
 ```python
 import cv2
@@ -264,7 +264,7 @@ Imagem pontilhada:
 ![floresPontilhada](https://github.com/alisson002/alisson002.github.io/blob/main/cannypointspontilhada.jpg?raw=true)
 
 
-## Exercicio 9.2 -  kmeans
+## Exercício 9.2 -  kmeans
 K-means é um processo de quantização que visa classificar N observações em K clusters.
 
 No processamento digital de imagens, cada observação corresponde a um pixel, e os clusters são a quantidade de cores que queremos. Podemos ordenar cada pixel a partir da aproximação com cada centróide (um centróide por cluster), então, pegamos a distância média das amostras em cada cluster, criando novas posições de centróides. É um processo iterativo, esse processo acontece até não termos mudanças mais significativas nas posições dos centróides, enfim, podemos atribuir uma cor para cada cluster.
