@@ -484,4 +484,4 @@ cv2.destroyAllWindows()
 
 <video src="PDI%20unidade3/video.mkv" width="1024" height="768" controls>
 
-[![Video no YouTube](Video no YouTube)](https://www.youtube.com/watch?v=_ee5DCQmWaM)
+[Video no YouTube](https://www.youtube.com/watch?v=_ee5DCQmWaM)
