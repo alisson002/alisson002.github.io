@@ -464,24 +464,35 @@ while True:
 img.release()
 cv2.destroyAllWindows()
 ```
+A seguir, veremos algumas imagens e um vídeo demonstrando o funcionamento do código. É notável que o algoritmo tem uma certa dificuldade em detectar rostos imcompletos ou que não estejam totalmente direcionados para a camêra.
 
+imagem01 - entrada
 ![img01Original](https://github.com/alisson002/alisson002.github.io/blob/main/PDI%20unidade3/img1.jpg?raw=true)
+imagem01 - saída
 ![img01box](https://github.com/alisson002/alisson002.github.io/blob/main/PDI%20unidade3/img11.png?raw=true)
 
+imagem02 - entrada
 ![img02Original](https://github.com/alisson002/alisson002.github.io/blob/main/PDI%20unidade3/img2.jpg?raw=true)
+imagem02 - saída
 ![img02box](https://github.com/alisson002/alisson002.github.io/blob/main/PDI%20unidade3/img22.png?raw=true)
 
+imagem03 - entrada
 ![img03Original](https://github.com/alisson002/alisson002.github.io/blob/main/PDI%20unidade3/img3.jpg?raw=true)
+imagem03 - saída
 ![img03box](https://github.com/alisson002/alisson002.github.io/blob/main/PDI%20unidade3/img33.png?raw=true)
 
+imagem04 - entrada
 ![img04Original](https://github.com/alisson002/alisson002.github.io/blob/main/PDI%20unidade3/i5.jpeg?raw=true)
+imagem04 - saída
 ![img04box](https://github.com/alisson002/alisson002.github.io/blob/main/PDI%20unidade3/img44.png?raw=true)
 
+imagem05 - entrada
 ![img05Original](https://github.com/alisson002/alisson002.github.io/blob/main/PDI%20unidade3/img5.jpeg?raw=true)
+imagem05 - saída
 ![img05box](https://github.com/alisson002/alisson002.github.io/blob/main/PDI%20unidade3/img55.png?raw=true)
 
-
+Logo abaixo está o vídeo e um link para o YouTube, caso não esteja funcionando aqui.
 [Link para o vídeo no YouTube](https://youtu.be/_ee5DCQmWaM)
-<div style="padding-top: -100px"> 
+
 <video src="PDI%20unidade3/video.mkv" width="1024" height="768" controls>
-</div>
+
