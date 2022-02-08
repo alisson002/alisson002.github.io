@@ -4,7 +4,7 @@ import cv2
 import dlib
  
  
-video = cv2.VideoCapture(0)
+video = cv2.VideoCapture(1)
 detector = dlib.get_frontal_face_detector()
  
  
