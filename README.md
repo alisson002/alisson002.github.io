@@ -480,4 +480,4 @@ cv2.destroyAllWindows()
 ![img05Original](https://github.com/alisson002/alisson002.github.io/blob/main/PDI%20unidade3/img5.jpeg?raw=true)
 ![img05box](https://github.com/alisson002/alisson002.github.io/blob/main/PDI%20unidade3/img55.png?raw=true)
 
-![videoCapturaDeFace](https://youtu.be/_ee5DCQmWaM?raw=true)
+https://youtu.be/_ee5DCQmWaM
