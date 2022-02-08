@@ -3,7 +3,7 @@ import cv2
 import dlib
  
  
-img = cv2.imread('C:/Users/Alisson Moreira/Desktop/alisson002.github.io/PDI unidade3/i19.jpeg')
+img = cv2.imread('C:/Users/Alisson Moreira/Desktop/alisson002.github.io/PDI unidade3/img5.jpeg')
  
 detector = dlib.get_frontal_face_detector()
  
