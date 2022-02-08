@@ -7,6 +7,8 @@ Alisson Sousa Moreira - 20200149004 - alisson-mu@hotmail.com
 
 [Exercício 9.2 - kmeans](https://alisson002.github.io/#Exercício-92----kmeans)
 
+[Unidade 3 - Detecção de Faces](https://alisson002.github.io/#unidade-3----detector-de-faces)
+
 ## Exercício 7.2 - homomórfico
 
 O processo de filtragem homomórfica é baseado nos princípios de iluminância e refletância. A iluminância representa variações espaciais lentas (frequências baixas), a refletância representa variações espaciais rápidas (frequências altas). Tomamos a transformada de Fourier da imagem e aplicamos um filtro sequencial (versão modificada do filtro gaussiano) que atenua as frequências baixas e mantém as frequências altas (filtro passa-altas) e fazemos a transformada de Fourier inversa, desta forma, melhorando a iluminância da imagem.
