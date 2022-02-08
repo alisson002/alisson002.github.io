@@ -333,3 +333,6 @@ Gif das imagens geradas:
 ![wargraymonGif](https://github.com/alisson002/alisson002.github.io/blob/main/kmeansGif/kmeans.gif?raw=true)
 
 
+## Unidade 3 -  Detector de Faces
+Este algoritmo tem como objetivo detectar e contar o número de faces em imagens e videos. O código deve colocar uma caixa (bounding box) no rostos detectados e contá-los, através de suas coordenadas.
+
