@@ -336,3 +336,129 @@ Gif das imagens geradas:
 ## Unidade 3 -  Detector de Faces
 Este algoritmo tem como objetivo detectar e contar o número de faces em imagens e videos. O código deve colocar uma caixa (bounding box) no rostos detectados e contá-los, através de suas coordenadas.
 
+Bibliotecas.
+```python
+import cv2
+import dlib
+```
+
+Captura de vídeo com a webcam e captura de coordenadas.
+```python
+video = cv2.VideoCapture(0)
+detector = dlib.get_frontal_face_detector()
+```
+
+Neste trecho do código os frames do vídeo serão capturados continuamente e um iterador será iniciado. Cada vez que as coordenadas de um rosto forem capturadas o iterador será incrementado em 1, para que cada rosto seja exibido com seu respectivo número na caixa.
+```python
+while True:
+    
+    #captura frame a frame
+    ret, frame = video.read()
+    frame = cv2.flip(frame, 1)
+ 
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    faces = detector(gray)
+    
+    #contador para contar o numero de rostos
+    i = 0
+    for face in faces:
+ 
+        x, y = face.left(), face.top()
+        x1, y1 = face.right(), face.bottom()
+        cv2.rectangle(frame, (x, y), (x1, y1), (0, 255, 0), 2)
+
+        #incrementa o interador cada vez que obtenho as coordenadas de um rosto
+        i = i+1
+        
+        #adiciona o número do rosto a sua respectiva caixa
+        cv2.putText(frame, 'face num'+str(i), (x-10, y-10),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+        print(face, i)
+ 
+    cv2.imshow('frame', frame)
+    
+    #termina o loop apertando a tecla 'e'
+    if cv2.waitKey(1) & 0xFF == ord('e'):
+        break
+ 
+```
+
+Algoritmo completo da detecção de faces com a webcam.
+```python
+import cv2
+import dlib
+ 
+ 
+video = cv2.VideoCapture(0)
+detector = dlib.get_frontal_face_detector()
+ 
+ 
+while True:
+ 
+    ret, frame = video.read()
+    frame = cv2.flip(frame, 1)
+ 
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    faces = detector(gray)
+ 
+    i = 0
+    for face in faces:
+ 
+        x, y = face.left(), face.top()
+        x1, y1 = face.right(), face.bottom()
+        cv2.rectangle(frame, (x, y), (x1, y1), (0, 255, 0), 2)
+ 
+        i = i+1
+        
+        cv2.putText(frame, 'face num'+str(i), (x-10, y-10),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+        print(face, i)
+ 
+    cv2.imshow('frame', frame)
+ 
+    if cv2.waitKey(1) & 0xFF == ord('e'):
+        break
+ 
+ 
+video.release()
+cv2.destroyAllWindows()
+```
+
+Algoritmo completo da detecção de faces em imagens.
+```python
+import cv2
+import dlib
+ 
+ 
+img = cv2.imread('C:/Users/Alisson Moreira/Desktop/alisson002.github.io/PDI unidade3/img5.jpeg')
+ 
+detector = dlib.get_frontal_face_detector()
+ 
+ 
+while True:
+ 
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    faces = detector(gray)
+ 
+    i = 0
+    for face in faces:
+ 
+        x, y = face.left(), face.top()
+        x1, y1 = face.right(), face.bottom()
+        cv2.rectangle(img, (x, y), (x1, y1), (0, 255, 0), 2)
+ 
+        i = i+1
+        
+        cv2.putText(img, 'face num'+str(i), (x-10, y-10),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+        print(face, i)
+ 
+    cv2.imshow('imagem', img)
+ 
+    if cv2.waitKey(1) & 0xFF == ord('e'):
+        break
+ 
+ 
+img.release()
+cv2.destroyAllWindows()
+```

@@ -3,7 +3,7 @@ import cv2
 import dlib
  
  
-img = cv2.imread('C:/Users/Alisson Moreira/Desktop/PDI unidade3/img6.jpeg')
+img = cv2.imread('C:/Users/Alisson Moreira/Desktop/alisson002.github.io/PDI unidade3/img5.jpeg')
  
 detector = dlib.get_frontal_face_detector()
  
@@ -28,7 +28,7 @@ while True:
  
     cv2.imshow('imagem', img)
  
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    if cv2.waitKey(1) & 0xFF == ord('e'):
         break
  
  
