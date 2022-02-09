@@ -476,6 +476,7 @@ imagem02 - entrada
 ![img02Original](https://github.com/alisson002/alisson002.github.io/blob/main/PDI%20unidade3/img2.jpg?raw=true)
 
 imagem02 - saída
+
 ![img02box](https://github.com/alisson002/alisson002.github.io/blob/main/PDI%20unidade3/img22.png?raw=true)
 
 imagem03 - entrada
