@@ -1,11 +1,11 @@
 # Lista de programação da dsiciplina Processamento Digital de Imagens (DCA0445)
 Alisson Sousa Moreira - 20200149004 - alisson-mu@hotmail.com
 
-[Exercício 7.2 - homomórfico](https://alisson002.github.io/#Exercício-72---homom%C3%B3rfico)
+[Exercício 7.2 - homomórfico](https://alisson002.github.io/#exerc%C3%ADcio-72---homom%C3%B3rfico)
 
-[Exercício 8.3 - cannypoints](https://alisson002.github.io/#Exercício-83---cannypoints)
+[Exercício 8.3 - cannypoints](https://alisson002.github.io/#exerc%C3%ADcio-83---cannypoints)
 
-[Exercício 9.2 - kmeans](https://alisson002.github.io/#Exercício-92----kmeans)
+[Exercício 9.2 - kmeans](https://alisson002.github.io/#exerc%C3%ADcio-92----kmeans)
 
 [Unidade 3 - Detecção de Faces](https://alisson002.github.io/#unidade-3----detector-de-faces)
 
@@ -464,7 +464,7 @@ while True:
 img.release()
 cv2.destroyAllWindows()
 ```
-A seguir, veremos algumas imagens e um vídeo demonstrando o funcionamento do código. É notável que o algoritmo tem uma certa dificuldade em detectar rostos imcompletos ou que não estejam totalmente direcionados para a camêra.
+A seguir, veremos algumas imagens e um vídeo demonstrando o funcionamento do código. É notável que o algoritmo tem uma certa dificuldade em detectar alguns rostos imcompletos ou que não estejam bem direcionados para a camêra.
 
 imagem01 - entrada
 ![img01Original](https://github.com/alisson002/alisson002.github.io/blob/main/PDI%20unidade3/img1.jpg?raw=true)
