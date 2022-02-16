@@ -336,7 +336,9 @@ Gif das imagens geradas:
 
 
 ## Unidade 3 -  Detector de Faces
-Este algoritmo tem como objetivo detectar e contar o número de faces em imagens e videos. O código deve colocar uma caixa (bounding box) no rostos detectados e contá-los, através de suas coordenadas.
+O objetivo deste projeto é detectar e contar o número de faces em imagens e videos. O código deve colocar uma caixa (bounding box) no rostos detectados e contá-los, através de suas coordenadas. 
+
+Este algoritmo pode ser adptado para ser ultilizado como um detector de algomeração, para contar quantas pessoas realmente fizeram parte de uma manifestação, passeata ou mesmo uma motociata, evitando que algumas pessoas caiam em fake news, por exemplo.
 
 Bibliotecas.
 ```python
